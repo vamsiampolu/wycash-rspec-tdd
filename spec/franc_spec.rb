@@ -1,4 +1,5 @@
 require 'franc'
+require 'dollar'
 
 describe Franc do
   describe '#times' do
@@ -70,6 +71,20 @@ describe Franc do
         seven = Franc.new 7
         expect(five).not_to eq seven
       end
+
+    end
+
+    context 'currencies are different' do
+
+      it 'is false when comparing Dollars and Francs' do
+
+        five_dollars = Dollar.new 5
+        five_francs = Franc.new 5
+
+        expect(five_francs == five_dollars).to be false
+
+      end
+
 
     end
 

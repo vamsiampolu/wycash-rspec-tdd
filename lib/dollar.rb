@@ -13,4 +13,9 @@ class Dollar < Money
     Dollar.new(amount)
   end
 
+  def ==(other)
+    return false unless other.kind_of? self.class
+    super
+  end
+
 end

@@ -13,4 +13,8 @@ class Franc < Money
     Franc.new(amount)
   end
 
+  def ==(other)
+    return false unless other.kind_of? self.class
+    super
+  end
 end
