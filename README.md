@@ -64,3 +64,7 @@ the author uses the third technique when he is not sure how to refactor the code
 > Unit testing can be used to translate `best practices` into actionable tasks.
 
 When the success of a test depends on the success/failure of another test, there is a risk of the former test reporting a bad value due to the latter.
+
+When refactoring, there might be situations where the tests will be inadequate for the code. Stop and write the tests for those cases immediately.
+
+---
