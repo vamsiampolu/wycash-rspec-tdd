@@ -1,5 +1,9 @@
-class Franc
+require 'money'
+
+class Franc < Money
+
   attr_reader :amount
+
   def initialize(number)
     @amount = number
   end
@@ -9,7 +13,4 @@ class Franc
     Franc.new(amount)
   end
 
-  def ==(other)
-    self.amount == other.amount
-  end
 end
