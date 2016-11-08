@@ -1,5 +1,8 @@
-class Money
+require 'dollar'
 
+
+class Money
+  require 'franc'
   attr_reader :amount
 
   def self.dollar(number)
@@ -7,7 +10,10 @@ class Money
   end
 
   def ==(other)
-    self.amount == other.amount
+    @amount == other.amount
   end
 
+  def self.franc(number)
+    Franc.new number
+  end
 end

@@ -14,7 +14,7 @@ class Dollar < Money
   end
 
   def ==(other)
-    return false unless other.kind_of? self.class
+    return false unless other.is_a? self.class
     super
   end
 
