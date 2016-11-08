@@ -3,8 +3,13 @@ class Money
   require 'dollar'
   attr_reader :amount
 
+  def initialize(number, currency)
+    @amount = number
+    @currency = currency
+  end
+
   def self.dollar(number)
-    Dollar.new number
+    Dollar.new(number, 'USD')
   end
 
   def ==(other)
@@ -12,6 +17,6 @@ class Money
   end
 
   def self.franc(number)
-    Franc.new number
+    Franc.new(number, 'CHF')
   end
 end

@@ -4,14 +4,13 @@ class Dollar < Money
   attr_reader :amount
   attr_reader :currency
 
-  def initialize(number)
-    @amount = number
-    @currency = 'USD'
+  def initialize(number, currency)
+    super(number, currency)
   end
 
   def times(mul)
     amount = @amount * mul
-    Dollar.new(amount)
+    Money.dollar(amount)
   end
 
   def ==(other)

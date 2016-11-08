@@ -8,7 +8,7 @@ describe Money do
     end
 
     it 'has same amount' do
-      five_dollar = Dollar.new 5
+      five_dollar = Money.dollar(5)
       expect(five_dollar.amount).to eq 5
     end
   end
