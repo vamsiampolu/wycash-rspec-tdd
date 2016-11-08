@@ -45,19 +45,9 @@ describe Money do
         ten = Money.dollar(10)
         product = five.times(2)
         expect(product).to eq ten
-
-        five = Money.franc(5)
-        ten = Money.franc(10)
-        product = five.times(2)
-        expect(product).to eq ten
       end
 
       it 'returns 21 for 7 times 3' do
-        seven = Money.dollar(7)
-        twenty_one = Money.dollar(21)
-        product = seven.times(3)
-        expect(product).to eq twenty_one
-
         seven = Money.franc(7)
         twenty_one = Money.franc(21)
         product = seven.times(3)
@@ -71,16 +61,6 @@ describe Money do
         five_again = Money.dollar(5)
         ten = Money.dollar(10)
         fifteen = Money.dollar(15)
-        product = five.times(2)
-        expect(product).to eq ten
-        product = five.times(3)
-        expect(product).to eq fifteen
-        expect(five).to eq five_again
-
-        five = Money.franc(5)
-        five_again = Money.franc(5)
-        ten = Money.franc(10)
-        fifteen = Money.franc(15)
         product = five.times(2)
         expect(product).to eq ten
         product = five.times(3)
