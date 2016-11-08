@@ -2,9 +2,11 @@ require 'money'
 
 class Franc < Money
   attr_reader :amount
+  attr_reader :currency
 
   def initialize(number)
     @amount = number
+    @currency = 'CHF'
   end
 
   def times(mul)

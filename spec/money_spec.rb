@@ -22,4 +22,14 @@ describe Money do
       expect(Money.franc(5).amount).to be 5
     end
   end
+
+  describe '#currency' do
+    it 'returns `USD` when called on `Dollar`' do
+      expect(Money.dollar(5).currency).to eq 'USD'
+    end
+
+    it 'returns `CHF` when called on `Franc`' do
+      expect(Money.franc(5).currency).to eq 'CHF'
+    end
+  end
 end
