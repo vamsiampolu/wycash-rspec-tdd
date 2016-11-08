@@ -23,6 +23,12 @@ The objective of the project is unit testing the Wycash application  When starti
 suggested by the book.
 
 
+Avoid getting into circumstances where you have circular requires, this means that you project is broken. In such cases, if you still want to keep using the same code, move the require a few lines down until after the class is defined.
+
+> Ruby would expect that the class you are attempting to inject can respond_to the message you are sending it, but Ruby is dynamic and you can out anything in there, leading to obvious bugs.
+
+> Also, note that Ruby does not attempt to lookup `Franc` from `Money` until the `franc` method has been invoked. That is the sole reason that code with circular dependencies works.
+
 ---
 
 Key points:
