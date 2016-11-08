@@ -1,8 +1,6 @@
-require 'dollar'
-
-
 class Money
   require 'franc'
+  require 'dollar'
   attr_reader :amount
 
   def self.dollar(number)

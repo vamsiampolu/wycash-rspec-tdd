@@ -1,7 +1,6 @@
 require 'money'
 
 class Dollar < Money
-
   attr_reader :amount
 
   def initialize(number)
@@ -17,5 +16,4 @@ class Dollar < Money
     return false unless other.is_a? self.class
     super
   end
-
 end
